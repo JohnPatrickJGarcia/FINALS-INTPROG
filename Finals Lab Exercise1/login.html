@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX JSON Example</title>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form id="loginForm">
+        Username: <input type="text" id="username"><br><br>
+        Password: <input type="password" id="password"><br><br>
+        <button type="button" onclick="sendData()">Submit</button>
+    </form>
+
+    <h3>Response:</h3>
+    <p id="response"></p>
+
+    <script>
+        function sendData() {
+            // Collect input data
+            let data = {
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value
+            };
+
+            // Simulate JSON response as if from PHP
+            let simulatedResponse = {
+                status: "success",
+                message: "Welcome, " + data.username + "!"
+            };
+
+            // Display the JSON response on page (no reload)
+            document.getElementById('response').innerHTML = 
+                "Status: " + simulatedResponse.status + "<br>" + 
+                "Message: " + simulatedResponse.message;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?php
+
+$inputJSON = '{"username":"Maria","password":"12345"}';
+
+
+$data = json_decode($inputJSON, true);
+
+echo "Username: " . $data['username'] . "<br>";
+echo "Password: " . $data['password'];
+?>
